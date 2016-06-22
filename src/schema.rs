@@ -35,6 +35,13 @@ table! {
 }
 
 table! {
+    room_members (room_id) {
+        room_id -> Text,
+        user_ids -> Array<Text>,
+    }
+}
+
+table! {
     users {
         id -> Text,
         password_hash -> Text,
